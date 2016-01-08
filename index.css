@@ -1,0 +1,41 @@
+/* CSS declarations go here */
+body {
+  background-color: #F2F6F7;
+}
+.contestant {
+  display: inline-block;
+  position: relative;
+}
+.contestant a.name {
+  background-color: #D1E3E8;
+  display: block;
+  width: 200px;
+  height: 150px;
+  padding-top: 50px;
+  font-size: 1.4em;
+  -webkit-transition: all ease-out .1s;
+    -moz-transition: all ease-out .1s;
+    -o-transition: all ease-out .1s;
+    transition: all ease-out .1s;
+}
+.contestant a.name:hover {
+  background-color: #ADEFFF;
+  color: #fff;
+}
+.contestant.active a.name {
+  background-color: #57777F;
+  -webkit-transform: scale(1.2);
+     -moz-transform: scale(1.2);
+       -o-transform: scale(1.2);
+          transform: scale(1.2);
+}
+.contestant.not-playing a.name {
+  opacity: 0.2;
+}
+.contestant.winner a.name {
+  background-color: #FFE0EB;
+  -webkit-transform: scale(1.5);
+     -moz-transform: scale(1.5);
+       -o-transform: scale(1.5);
+          transform: scale(1.5);
+}

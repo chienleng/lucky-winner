@@ -1,0 +1,38 @@
+<head>
+  <title>s-master</title>
+</head>
+
+<body>
+  <div class="container" style="text-align: center; margin-top: 50px;">
+    <h1>pick the winner!</h1>
+    {{> picker}}
+  </div>
+</body>
+
+<template name="picker">
+
+  <div id="lucky-winner" style="position: relative; margin-bottom: 20px; text-align: center;">
+    {{#each contestants}}
+    <div id="{{_id}}" class="contestant">
+      <a href="#" class="name">{{name}}</a>
+      <a href="#" class="remove-me">[x]</a>
+    </div>
+    {{/each}}
+  </div>
+
+  {{#if contestants.length}}
+  <p style="text-align: center;">
+    <button class="pick button button-primary">Pick</button>
+    <button class="reset button">Reset all picked</button>
+  </p>
+  {{/if}}
+
+  <hr>
+
+  <form action="" style="text-align: center">
+    <label for="">Add contestants</label>
+    <input type="text" id="sprinter-name">
+    <button class="add-btn button button-primary">Add</button>
+  </form>
+
+</template>
